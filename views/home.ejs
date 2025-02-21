@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= typeof title !== 'undefined' ? title : "Page sans titre" %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">🌱 IA ÉCO</div>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/pollution">Pourquoi les IA polluent ?</a></li>
+                <li><a href="/solutions">Solutions</a></li>
+                <li><a href="/engagement">Engagements</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero scroll-reveal">
+        <h1>L'IA, un progrès technologique mais à quel prix écologique ?</h1>
+        <p>Découvrez comment l'intelligence artificielle impacte l’environnement et comment nous pouvons agir.</p>
+        <a href="/solutions" class="cta-btn">Découvrir les solutions</a>
+    </section>
+
+    <section class="chat-section">
+        <h2>💬 Discussion entre Alex et Julie</h2>
+        <div class="chat-container">
+            <div class="chat-message alex">
+                <p><strong>Alex :</strong> Tu savais que l'IA est partout ? Assistants vocaux, recommandations de films... Mais ça pollue aussi !</p>
+            </div>
+            <div class="chat-message julie">
+                <p><strong>Julie :</strong> Sérieux ? Comment ça ?</p>
+            </div>
+            <div class="chat-message alex">
+                <p><strong>Alex :</strong> Les centres de données consomment beaucoup d'énergie, souvent avec des sources polluantes comme le charbon.</p>
+            </div>
+            <div class="chat-message julie">
+                <p><strong>Julie :</strong> Ah oui, et ça émet du CO2, non ?</p>
+            </div>
+            <div class="chat-message alex">
+                <p><strong>Alex :</strong> Exact ! Un modèle d'IA peut émettre autant de CO2 que plusieurs voitures. Et ça produit beaucoup de déchets électroniques.</p>
+            </div>
+            <div class="chat-message julie">
+                <p><strong>Julie :</strong> Pas cool. On peut faire quoi ?</p>
+            </div>
+            <div class="chat-message alex">
+                <p><strong>Alex :</strong> Utiliser des algorithmes plus efficaces et des énergies renouvelables pour les centres de données.</p>
+            </div>
+            <div class="chat-message julie">
+                <p><strong>Julie :</strong> Bonne idée. Et pour les déchets ?</p>
+            </div>
+            <div class="chat-message alex">
+                <p><strong>Alex :</strong> Recycler et réutiliser les équipements. Et sensibiliser les gens à l'impact écologique de l'IA.</p>
+            </div>
+            <div class="chat-message julie">
+                <p><strong>Julie :</strong> Ça me semble bien. On peut tous aider en soutenant des initiatives vertes !</p>
+            </div>
+            <div class="chat-message alex">
+                <p><strong>Alex :</strong> Exactement ! L'IA peut rendre le monde meilleur, mais il faut la rendre plus verte aussi.</p>
+            </div>
+        </div>
+    </section>    
+
+    <section class="stats scroll-reveal">
+        <h2>Quelques chiffres</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3 class="counter" data-target="500">0</h3>
+                <p>Tonnes de CO2 émises par un modèle IA.</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="30">0</h3>
+                <p>Litres d’eau utilisés par un serveur IA chaque jour.</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="10">0</h3>
+                <p>Fois plus d’énergie consommée qu’un moteur de recherche classique.</p>
+            </div>
+        </div>
+    </section>    
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

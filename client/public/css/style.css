@@ -1,0 +1,309 @@
+/* 🌍 Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #F5F5F5;
+    color: #1B263B;
+    text-align: center;
+}
+
+/* 🌍 Navbar fixe */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(27, 38, 59, 0.9);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #A5D6A7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2E7D32;
+}
+
+/* 💡 Hero Section */
+.hero {
+    background: linear-gradient(to right, #2E7D32, #1B263B);
+    color: white;
+    padding: 100px 20px; /* Ajustement pour éviter le chevauchement */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #A5D6A7;
+    color: #1B263B;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #2E7D32;
+    color: white;
+}
+
+/* 📊 Section des statistiques */
+.stats {
+    padding: 60px 20px;
+    background: #A5D6A7;
+}
+
+.stats h2 {
+    color: #1B263B;
+    font-size: 2em;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stat-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+.stat-item h3 {
+    color: #2E7D32;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* 💬 Section de discussion */
+.chat-section {
+    padding: 100px 20px 50px;
+    text-align: center;
+    background: #F5F5F5;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 80%;
+    font-size: 1.1em;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Animation d'apparition */
+.chat-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styles spécifiques */
+.chat-message.alex {
+    align-self: flex-start;
+    background: #A5D6A7;
+    color: #1B263B;
+    text-align: left;
+}
+
+.chat-message.julie {
+    align-self: flex-end;
+    background: #E1F5FE;
+    color: #1B263B;
+    text-align: left;
+}
+
+/* 📩 Formulaire de contact */
+.contact-form {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-form form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #1B263B;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #A5D6A7;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background: #2E7D32;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background: #1B263B;
+}
+
+/* 📊 Tableau admin */
+.message-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.message-table th, .message-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.message-table th {
+    background: #2E7D32;
+    color: white;
+}
+
+/* 🌍 Footer */
+footer {
+    background: #1B263B;
+    color: #A5D6A7;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .chat-message {
+        max-width: 90%;
+        font-size: 1em;
+    }
+
+    .message-table {
+        width: 100%;
+    }
+}
+
+.chart-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+#pollutionChart {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.impact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+.icon-box {
+    text-align: center;
+}
+
+.icon-box img {
+    width: 60px;
+    height: 60px;
+}
+
+.data-center-image img {
+    max-width: 80%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.comparison-table {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background: #2E7D32;
+    color: white;
+}
+
+.video-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.video-section iframe {
+    width: 80%;
+    max-width: 560px;
+}

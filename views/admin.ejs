@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">🌱 IA ÉCO - Admin</div>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/admin">Messages reçus</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="content">
+        <h2>📩 Messages reçus</h2>
+        <% if (error) { %>
+            <p class="error"><%= error %></p>
+        <% } else { %>
+            <table class="message-table">
+                <tr>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                </tr>
+                <% messages.forEach(msg => { %>
+                    <tr>
+                        <td><%= msg.name %></td>
+                        <td><%= msg.email %></td>
+                        <td><%= msg.message %></td>
+                        <td><%= msg.created_at %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        <% } %>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 IA ÉCO - Admin</p>
+    </footer>
+
+</body>
+</html>
